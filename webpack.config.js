@@ -21,7 +21,6 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
       },
-      // CSS Modules için *.module.css dosyaları
       {
         test: /\.module\.css$/i,
         use: [
@@ -29,12 +28,11 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              modules: true,  // burada CSS Modules aktif ediliyor
+              modules: true, 
             },
           },
         ],
       },
-      // Diğer normal css dosyaları için
       {
         test: /\.css$/i,
         exclude: /\.module\.css$/i,
