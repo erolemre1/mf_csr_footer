@@ -4,10 +4,10 @@ module.exports = {
   webpack(config, options) {
     config.plugins.push(
       new NextFederationPlugin({
-        name: 'footer_app',
+        name: 'remote_app',
         filename: 'static/chunks/remoteEntry.js',
         exposes: {
-          './Footer': '.src/components/RemoteComponent',
+          './Header': '.src/components/RemoteComponent',
         },
         shared: {},
       })
